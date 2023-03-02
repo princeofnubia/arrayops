@@ -22,5 +22,13 @@ const prioritySort = (arr, target) => {
 };
 
 // console.log(prioritySort([2,3,5,3,2,3,2], 2)) => [2,2,2,3,5,3,3]
+const prioritySort2 = (arr, targets) => {
+  for (let index = 0; index < targets.length; index++) {
+    const element = targets[targets.length - index - 1];
+    arr = prioritySort(arr, element);
+  }
+  return arr;
+};
 
-export default prioritySort;
+console.log(prioritySort2([2, 3, 5, 3, 2, 3, 2, 4, 6], [2, 3, 6, 4]));
+//export default prioritySort;
