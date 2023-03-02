@@ -7,6 +7,28 @@
  * [2,2,2,3,5,3,3]
  */
 
+const getTargetList = (arr, target) => {
+  const targetList = [];
+  for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+    if (element == target) {
+      targetList.push(target);
+    }
+  }
+  return targetList;
+};
+
+const getNonTargetList = (arr, target) => {
+  const nonTargetList = [];
+  for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+    if (element != target) {
+      nonTargetList.push(target);
+    }
+  }
+  return nonTargetList;
+};
+
 const prioritySort = (arr, target) => {
   const nonTargetList = [];
   const targetList = [];
@@ -30,5 +52,19 @@ const prioritySort2 = (arr, targets) => {
   return arr;
 };
 
-console.log(prioritySort2([2, 3, 5, 3, 2, 3, 2, 4, 6], [2, 3, 6, 4]));
+const getTheSorted = (arr, target) => {
+  let rr = getTargetList(arr, target);
+  return rr;
+};
+
+const getTheSorteds = (arr, targets) => {
+  let m = [];
+  for (let index = 0; index < targets.length; index++) {
+    const element = targets[index];
+    m.push(...getTheSorted(arr, element));
+  }
+  return m;
+};
+
+console.log(getTheSorteds([2, 3, 5, 3, 2, 3, 2, 4, 6], [2, 6]));
 //export default prioritySort;
