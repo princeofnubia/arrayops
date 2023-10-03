@@ -4,8 +4,9 @@ This repo is a collection of solutions to myriads of array problems I have encou
 
 It is a good reference for those who are preparing for interviews.
 
-It is also good for those starting out in the learning of alogrithm
+# test
 
-I hope you find it beneficial
+You can test the code by installing nodemon
+and running the following command in your terminal
 
-If you love it. Please don't forget to star it
+`> nodemon`
