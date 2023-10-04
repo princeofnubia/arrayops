@@ -7,6 +7,6 @@ It is a good reference for those who are preparing for interviews.
 # test
 
 You can test the code by installing nodemon
-and running the following command in your terminal
+and running the following comma
 
 `> nodemon`
